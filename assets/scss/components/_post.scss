@@ -1,0 +1,158 @@
+// Запись на странице архива/категории
+
+.post {
+  width: 100%;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  border-bottom: 1px solid var(--t-green);
+
+  &:last-child {
+    margin-bottom: 0;
+    border: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: var(--t-green);
+  }
+
+  // Иконка над постом
+  &-head {
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--icon {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px;
+      height: 50px;
+      background-image: url('assets/img/icons/post-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 80px;
+        height: 1px;
+        background: var(--green);
+      }
+
+      &:before {
+        left: calc(100% + 20px);
+      }
+
+      &:after {
+        right: calc(100% + 20px);
+      }
+    }
+  }
+
+  // Картинка записи
+  &-img {
+    width: 100%;
+    height: 255px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      img {
+        transform: scale(1.03);
+      }
+
+      .post-img--overlay {
+        opacity: .3;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .9s ease all;
+    }
+
+    &--overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(222.84deg, rgba(0, 0, 0, 0) 12.38%, rgba(13, 13, 13, 0.3) 81.16%);
+      transition: .9s ease all;
+    }
+  }
+
+  &-body {
+    padding: 20px 50px 35px;
+    background: var(--l-green);
+
+    &--meta { // Дата и автор
+      span, a {
+        font-family: $arial;
+        font-size: 13px;
+        color: var(--gray);
+        text-decoration: none;
+        font-style: italic;
+      }
+
+      .updated {
+        display: none;
+      }
+    }
+
+    &--title { // Заголовок
+      margin-top: 10px;
+      margin-bottom: 0;
+
+      a {
+        color: var(--black);
+        text-decoration: none;
+      }
+    }
+
+    &--content { // Контент записи
+      margin-top: 10px;
+      margin-bottom: 25px;
+
+      p {
+        font-family: $arial;
+        font-size: 13px;
+        color: var(--gray);
+        margin-bottom: 0;
+      }
+    }
+
+    &--link { // Ссылка на запись
+      padding: 10px 25px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 13px;
+      text-decoration: none;
+      background: var(--green);
+      transition: .3s ease all;
+
+      &:hover {
+        color: white;
+        opacity: .95;
+      }
+    }
+  }
+}

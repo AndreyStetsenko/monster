@@ -1,0 +1,24 @@
+.container {
+  &-main {
+    max-width: 675px;
+    margin: 0 auto;
+  }
+
+  &-border {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    border-bottom: 1px solid var(--t-green);
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: var(--t-green);
+    }
+  }
+}

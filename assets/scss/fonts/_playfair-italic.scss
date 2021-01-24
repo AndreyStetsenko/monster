@@ -1,0 +1,26 @@
+@mixin fface($path, $family, $type: '', $weight: 400, $svg: '', $style: italic) {
+  @font-face {
+    font-family: $family;
+    @if $svg == '' {
+      // with OTF without SVG and EOT
+      src: url('#{$path}#{$type}.ttf') format('truetype');
+    } @else {
+      // traditional src inclusions
+      src: url('#{$path}#{$type}.ttf') format('truetype');
+    }
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+// ========================================================importing
+$dir: 'assets/fonts/PlayfairDisplay/';
+
+$finter: 'PlayfairDisplay';
+// adding specific types of font-weights
+@include fface('#{$dir}#{$finter}', $finter, '-Italic', 400);
+@include fface('#{$dir}#{$finter}', $finter, '-MediumItalic', 500);
+@include fface('#{$dir}#{$finter}', $finter, '-SemiBoldItalic', 600);
+@include fface('#{$dir}#{$finter}', $finter, '-BoldItalic', 500);
+@include fface('#{$dir}#{$finter}', $finter, '-ExtraBoldItalic', 600);
+@include fface('#{$dir}#{$finter}', $finter, '-BlackItalic', 700);
+// ========================================================usage

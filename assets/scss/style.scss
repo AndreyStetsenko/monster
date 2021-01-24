@@ -1,0 +1,25 @@
+/*!
+Theme Name: Monster
+Theme URI: https://malina.tech/
+Author: Andrew Stetsenko
+Author URI: https://malina.tech/
+Description: Тема для тестового задания Monster
+Version: 2.0.0
+Tested up to: 5.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: monster.loc
+*/
+@import "fonts/_style";
+
+@import "bootstrap/bootstrap";
+
+@import "typography/_style";
+
+@import "base/_style";
+@import "components/_style";
+
+@import "single/_style";
+
+@import url("//cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");

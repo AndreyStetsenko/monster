@@ -4,14 +4,6 @@
 node_modules/
 /node_modules/
 
-#Main
-.editorconfig
-.eslintignore
-.eslintrc.js
-gulpfile.babel.js
-package-lock.json
-package.json
-
 # Packages #
 ############
 *.7z
