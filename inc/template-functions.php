@@ -116,13 +116,6 @@ function cody_redirect_single_post() {
 	}
 }
 
-// Register Custom Navigation Walker
-require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
-register_nav_menus( array(
-  'primary' => __( 'Primary Menu', 'monster' ),
-));
-
 // Скрываем заголовок "Навтигация по записям"
 
 add_filter('navigation_markup_template', 'monster_navigation_markup_template');
