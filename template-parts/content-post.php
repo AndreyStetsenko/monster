@@ -9,7 +9,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" class="post">
+<div id="post-<?php the_ID(); ?>" class="post post-single">
 	<div class="post-head">
 		<div class="post-head--icon"></div>
 	</div>

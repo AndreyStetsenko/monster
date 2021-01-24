@@ -12,7 +12,7 @@ get_header();
 
 <div class="content-blog">
 	<div class="container">
-		<div class="content-blog--content">
+		<div class="content-blog--content content-single">
 
 		<?php
 		while ( have_posts() ) :

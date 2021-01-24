@@ -1173,6 +1173,7 @@ h6,.h6{font-size:17px}
 .nav-links .nav-subtitle{font-size:15px;color:var(--gray);opacity:.5;font-family:"Arial"}
 .nav-links .nav-title{color:black;font-size:15px}
 .nav-links--next .nav-subtitle{text-align:right}
+.content-single .post-body{padding-left:0;padding-right:0;padding-bottom:0;background:transparent}
 @media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}
 }@media(prefers-reduced-motion:reduce){.form-control{-webkit-transition:none;transition:none}
 .form-control::file-selector-button{-webkit-transition:none;transition:none}
